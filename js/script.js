@@ -20,12 +20,12 @@ if (navigator.serviceWorker) {
  */
  function calculate() {
   // input
-  const Side1 = parseInt(document.getElementById("side-1-of-triangle").value)
-  const Side2 = parseInt(document.getElementById("side-2-of-triangle").value)
-  const Side3 = parseInt(document.getElementById("side-3-of-triangle").value)
+  const aBase = parseInt(document.getElementById("a-base-of-trapezoid").value)
+  const bBase = parseInt(document.getElementById("b-base-of-trapezoid").value)
+  const height = parseInt(document.getElementById("height-of-trapezoid").value)
   // process
-  const triangle = Side1 + Side2 + Side3
+  const trapezoid = [ ( aBase + bBase ) / 2 ] * height
 
   // output
-  document.getElementById("area").innerHTML = "perimeter is: " + triangle + " cm "
+  document.getElementById("area").innerHTML = "area is: " + trapezoid + " mm² "
 }
