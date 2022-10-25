@@ -16,8 +16,16 @@ if (navigator.serviceWorker) {
 }
 
 /**
- * This function displays an alert.
+ * This function calculates area and perimeter of rectangle.
  */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+ function calculate() {
+  // input
+  const Side1 = parseInt(document.getElementById("side-1-of-triangle").value)
+  const Side2 = parseInt(document.getElementById("side-2-of-triangle").value)
+  const Side3 = parseInt(document.getElementById("side-3-of-triangle").value)
+  // process
+  const triangle = Side1 + Side2 + Side3
+
+  // output
+  document.getElementById("area").innerHTML = "perimeter is: " + triangle + " cm "
 }
