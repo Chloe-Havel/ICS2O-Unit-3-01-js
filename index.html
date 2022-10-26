@@ -23,99 +23,100 @@
       media="none"
       onload="if(media!='all')media='all'"
     />
-  />
-  <link
-    rel="stylesheet"
-    href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
-  />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>Area and Perimeter, with JavaScript</title>
-</head>
-<body>
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script src="./js/script.js"></script>
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Area of a trapezoid</span>
-      </div>
-    </header>
-    <main class="mdl-layout__content">
-      <table>
-        <tr>
-          <th>
-            <img src="./images/perimeter.jpg"
-              alt="rectangle"
-              width="75%"
-              height="auto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Area and Perimeter, with JavaScript</title>
+  </head>
+  <body>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Area of a trapezoid</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <img
+                src="./images/perimeter.jpg"
+                alt="rectangle"
+                width="75%"
+                height="auto"
+              />
+            </th>
+            <th>
+              <h2>Formulas</h2>
+              <h3>A = [ ( A + B ) / 2 ] h</h3>
+            </th>
+          </tr>
+        </table>
+        <!-- Simple Textfield -->
+        <form action="#">
+          <p>A Base</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="a-base-of-trapezoid"
             />
-          </th>
-          <th>
-            <h2>Formulas</h2>
-            <h3>A = [ ( A + B ) / 2 ] h</h3>
-          </th>
-        </tr>
-      </table>
-      <!-- Simple Textfield -->
-      <form action="#">
-        <p>A Base</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input
-            class="mdl-textfield__input"
-            type="text"
-            pattern="-?[0-9]*(\.[0-9]+)?"
-            id="a-base-of-trapezoid"
-          />
-          <label class="mdl-textfield__label" for="a-base-of-trapezoid"
-            >A Base (mm) ...</label
-          >
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </form>
-      <!-- Numeric Textfield -->
-      <form action="#">
-        <p>B Base</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input
-            class="mdl-textfield__input"
-            type="text"
-            pattern="-?[0-9]*(\.[0-9]+)?"
-            id="b-base-of-trapezoid"
-          />
-          <label class="mdl-textfield__label" for="b-base-of-trapezoid"
-            >B Base (mm) ...</label
-          >
-        </div>
+            <label class="mdl-textfield__label" for="a-base-of-trapezoid"
+              >A Base (mm) ...</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
         </form>
-          <!-- Numeric Textfield -->
-      <form action="#">
-        <p>height</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input
-            class="mdl-textfield__input"
-            type="text"
-            pattern="-?[0-9]*(\.[0-9]+)?"
-            id="height-of-trapezoid"
-          />
-          <label class="mdl-textfield__label" for="height-of-trapezoid>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>B Base</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="b-base-of-trapezoid"
+            />
+            <label class="mdl-textfield__label" for="b-base-of-trapezoid"
+              >B Base (mm) ...</label
+            >
+          </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>height</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="height-of-trapezoid"
+            />
+            <label class="mdl-textfield__label" for="height-of-trapezoid>
 
-          <span class="mdl-textfield__error">Input is not a number!</span>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <br />
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()"
+        >
+          Calculate
+        </button>
+        <br />
+        <div id="answers">
+          <div id="area"></div>
+          <div id="perimeter"></div>
         </div>
-      </form>
-      <br />
-      <!-- Raised button with ripple -->
-      <button
-        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-        onclick="calculate()"
-      >
-        Calculate
-      </button>
-      <br />
-      <div id="answers">
-        <div id="area"></div>
-        <div id="perimeter"></div>
-      </div>
-    </main>
-  </div>
-</body>
+      </main>
+    </div>
+  </body>
 </html>

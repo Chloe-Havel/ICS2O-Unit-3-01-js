@@ -18,13 +18,13 @@ if (navigator.serviceWorker) {
 /**
  * This function calculates area and perimeter of rectangle.
  */
- function calculate() {
+function calculate() {
   // input
   const aBase = parseInt(document.getElementById("a-base-of-trapezoid").value)
   const bBase = parseInt(document.getElementById("b-base-of-trapezoid").value)
   const height = parseInt(document.getElementById("height-of-trapezoid").value)
   // process
-  const trapezoid = [ ( aBase + bBase ) / 2 ] * height
+  const trapezoid = [(aBase + bBase) / 2] * height
 
   // output
   document.getElementById("area").innerHTML = "area is: " + trapezoid + " mm² "
