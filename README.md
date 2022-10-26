@@ -1,7 +1,7 @@
 # ICS2O-Unit-3-01-js
 
-[![Mr Coxall's Super Linter](https://github.com/Chloe-Havel/ICS2O-PWA-Test-1/workflows/Mr%20Coxall's%20Super%20Linter/badge.svg)](https://github.com/Chloe-Havel/ICS2O-PWA-Test-1/actions)
+[![Mr Coxall's Super Linter](https://github.com/Chloe-Havel/ICS2O-Unit-3-01-js/workflows/Mr%20Coxall's%20Super%20Linter/badge.svg)](https://github.com/Chloe-Havel/ICS2O-Unit-3-01-js/actions)
 
-[![Run on Repl.it](https://repl.it/badge/github/Chloe-Havel/ICS2O-PWA-Test-1)](https://repl.it/github/Chloe-Havel/ICS2O-PWA-Test-1)
+[![Run on Repl.it](https://repl.it/badge/github/Chloe-Havel/ICS2O-Unit-3-01-js)](https://repl.it/github/Chloe-Havel/ICS2O-Unit-3-01-js)
 
-This site can be found at: [https://Chloe-Havel.github.io/ICS2O-PWA-Test-1/](https://Chloe-Havel.github.io/ICS2O-PWA-Test-1/)
+This site can be found at: [https://Chloe-Havel.github.io/ICS2O-Unit-3-01-js/](https://Chloe-Havel.github.io/ICS2O-Unit-3-01-js/)
